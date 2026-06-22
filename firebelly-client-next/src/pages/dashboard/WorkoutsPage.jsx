@@ -33,6 +33,7 @@ export default function WorkoutsPage() {
     clients,
     selectedClientId,
     setSelectedClientId,
+    accountId,
     rangeStart,
     rangeEnd,
     loading,
@@ -80,7 +81,7 @@ export default function WorkoutsPage() {
       ) : (
         <ul className="flex flex-col gap-2">
           {workouts.map((workout) => (
-            <WorkoutCard key={workout._id} workout={workout} />
+            <WorkoutCard key={workout._id} workout={workout} accountId={accountId} />
           ))}
         </ul>
       )}

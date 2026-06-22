@@ -11,6 +11,7 @@ import SignUpPage from "@/pages/auth/SignUpPage";
 import VerifyEmailPage from "@/pages/auth/VerifyEmailPage";
 import SchedulePage from "@/pages/dashboard/SchedulePage";
 import WorkoutsPage from "@/pages/dashboard/WorkoutsPage";
+import WorkoutDetailPage from "@/pages/dashboard/WorkoutDetailPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         >
           <Route index element={<SchedulePage />} />
           <Route path="/workouts" element={<WorkoutsPage />} />
+          <Route path="/workouts/:id" element={<WorkoutDetailPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Route>
